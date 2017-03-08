@@ -34,5 +34,7 @@ platform:
 install:
   - "%PYTHON%\\python.exe -m pip install django==%DJANGO_VERSION%"
 
+build: off
+
 test_script:
   - "%PYTHON%\\python.exe manage.py test"
