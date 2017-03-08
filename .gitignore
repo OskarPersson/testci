@@ -1,0 +1,5 @@
+*.py[co]
+*.pyo
+.DS_Store
+venv
+db.sqlite3
