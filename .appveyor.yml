@@ -27,6 +27,9 @@ environment:
 
 services:
   - mysql
+  - mssql2012sp1
+  - mssql2014
+  - mssql2016
 
 platform:
   - x86
