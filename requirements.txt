@@ -9,7 +9,7 @@ django-redis==4.7.0
 django-rest-auth[with_social]==0.8.1
 httpretty==0.8.14
 jsonpickle==0.9.3
-lxml==3.6.4
+lxml==3.7.3
 mysqlclient==1.3.10
 opf-fido==1.3.5
 pytz
