@@ -139,8 +139,8 @@ init:
 - cmd: net start %SQL%
 
 install:
-  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install lxml-3.7.3-cp27-cp27m-win_amd64.whl"
-  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install mysqlclient-1.3.10-cp27-cp27m-win_amd64.whl"
+  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install lxml-3.7.3-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
+  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
   - "C:\\Python%PYTHON%-x64\\python.exe -m pip install -r requirements.txt"
   - "C:\\Python%PYTHON%-x64\\python.exe -m pip install django==%DJANGO_VERSION%"
   - nuget install redis-64 -excludeversion
