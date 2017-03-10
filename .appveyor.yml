@@ -148,7 +148,7 @@ install:
   - cmd: pip install -r requirements.txt --install-option="--no-cython-compile"
   - cmd: cd ..
 
-  - cmd: pip install lxml
+  - cmd: python -m pip install lxml
   - "python -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
   - "python -m pip install -r requirements.txt"
   - "python -m pip install django==%DJANGO_VERSION%"
