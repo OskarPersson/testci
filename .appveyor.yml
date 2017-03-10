@@ -143,7 +143,7 @@ init:
 install:
   - cmd: git clone https://github.com/lxml/lxml
   - cmd: cd lxml
-  - cmd: SET PATH=C:\\Python%PYTHON%-x64;c:\\Python%PYTHON%-x64\\scripts;%PATH%
+  - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
   - cmd: python -m pip.__main__ install -U pip wheel setuptools
   - cmd: pip install -r requirements.txt --install-option="--no-cython-compile"
   - cmd: cd ..
