@@ -7,37 +7,37 @@ environment:
 
     # -------- PYTHON 2.7, Django 1.10 --------
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.10"
       SQL: MySQL57
 
     # -------- PYTHON 2.7, Django 1.11b1 --------
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "27"
+    - PYTHON: "27-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MySQL57
 
