@@ -139,10 +139,17 @@ init:
 - cmd: net start %SQL%
 
 install:
-  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install lxml-3.7.3-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
-  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
-  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install -r requirements.txt"
-  - "C:\\Python%PYTHON%-x64\\python.exe -m pip install django==%DJANGO_VERSION%"
+  - cmd: git clone https://github.com/lxml/lxml
+  - cmd: cd lxml
+  - cmd: SET PATH=C:\\Python%PYTHON%-x64;c:\\Python%PYTHON%-x64\\scripts;%PATH%
+  - cmd: python -m pip.__main__ install -U pip wheel setuptools
+  - cmd: pip install -r requirements.txt --install-option="--no-cython-compile"
+  - cmd: cd ..
+
+  - cmd: pip install lxml
+  - "python -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
+  - "python -m pip install -r requirements.txt"
+  - "python -m pip install django==%DJANGO_VERSION%"
   - nuget install redis-64 -excludeversion
   - redis-64\tools\redis-server.exe --service-install
   - redis-64\tools\redis-server.exe --service-start
