@@ -149,12 +149,12 @@ install:
   - cmd: cd ..
 
   - cmd: python -m pip install lxml
-  - "python -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
-  - "python -m pip install -r requirements.txt"
-  - "python -m pip install django==%DJANGO_VERSION%"
-  - nuget install redis-64 -excludeversion
-  - redis-64\tools\redis-server.exe --service-install
-  - redis-64\tools\redis-server.exe --service-start
+  - cmd: "python -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
+  - cmd: "python -m pip install -r requirements.txt"
+  - cmd: "python -m pip install django==%DJANGO_VERSION%"
+  - cmd: nuget install redis-64 -excludeversion
+  - cmd: redis-64\tools\redis-server.exe --service-install
+  - cmd: redis-64\tools\redis-server.exe --service-start
 
 build: off
 
