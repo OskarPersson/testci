@@ -133,7 +133,9 @@ environment:
 
 
 platform:
-  - x86
+  - x64
+
+image: Visual Studio 2015
 
 init:
 - cmd: net start %SQL%
