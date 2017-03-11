@@ -7,37 +7,37 @@ environment:
 
     # -------- PYTHON 2.7, Django 1.10 --------
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.10"
       SQL: MySQL57
 
     # -------- PYTHON 2.7, Django 1.11b1 --------
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "27-x64"
+    - PYTHON: "27"
       DJANGO_VERSION: "1.11b1"
       SQL: MySQL57
 
@@ -79,55 +79,55 @@ environment:
 
     # -------- PYTHON 3.5, Django 1.10 --------
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.10"
       SQL: MySQL57
 
     # -------- PYTHON 3.5, Django 1.11b1 --------
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "35-x64"
+    - PYTHON: "35"
       DJANGO_VERSION: "1.11b1"
       SQL: MySQL57
 
     # -------- PYTHON 3.6, Django 1.11b1 --------
 
-    - PYTHON: "36-x64"
+    - PYTHON: "36"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "36-x64"
+    - PYTHON: "36"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "36-x64"
+    - PYTHON: "36"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "36-x64"
+    - PYTHON: "36"
       DJANGO_VERSION: "1.11b1"
       SQL: MySQL57
 
@@ -135,7 +135,7 @@ environment:
 platform:
   - x64
 
-image: Visual Studio 2010
+image: Visual Studio 2015
 
 init:
 - cmd: net start %SQL%
