@@ -143,7 +143,7 @@ init:
 install:
   - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
 
-  - cmd: set STATICBUILD=true && python -m pip install lxml
+  - cmd: set STATICBUILD=true && python -m pip install lxml==3.6.0
   - cmd: "python -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
   - cmd: "python -m pip install -r requirements.txt"
   - cmd: "python -m pip install django==%DJANGO_VERSION%"
