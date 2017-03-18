@@ -43,37 +43,37 @@ environment:
 
     # -------- PYTHON 3.4, Django 1.10 --------
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.10"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.10"
       SQL: MySQL57
 
     # -------- PYTHON 3.4, Django 1.11b1 --------
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2012SP1
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2014
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MSSQL$SQL2016
 
-    - PYTHON: "34"
+    - PYTHON: "34-x64"
       DJANGO_VERSION: "1.11b1"
       SQL: MySQL57
 
@@ -143,7 +143,7 @@ init:
 install:
   - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
 
-  - cmd: set STATICBUILD=true && python -m pip install lxml==3.6.0
+  - cmd: python -m pip install lxml==3.6.0
   - cmd: "python -m pip install mysqlclient-1.3.10-cp%PYTHON%-cp%PYTHON%m-win_amd64.whl"
   - cmd: "python -m pip install -r requirements.txt"
   - cmd: "python -m pip install django==%DJANGO_VERSION%"
