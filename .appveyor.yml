@@ -145,6 +145,7 @@ install:
 
   - cmd: python -m pip install lxml==3.6.0
   - "pip install wheel"
+  - ps: wget 'https://github.com/PyMySQL/mysqlclient-python/releases/download/1.3.8/mysqlclient-1.3.9-cp27-cp27m-win_amd64.whl' -OutFile "$pwd\mysqlclient-1.3.9-cp27-cp27m-win_amd64.whl"
   - "pip install mysqlclient-1.3.9-cp27-cp27m-win_amd64.whl"
   - cmd: sed -e '/mysqlclient==1.3.9/ s/^#*/#/' -i mysqlrequirements.txt
   - "pip install -r mysqlrequirements.txt"
