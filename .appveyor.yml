@@ -158,4 +158,4 @@ install:
 build: off
 
 test_script:
-  - "C:\\Python%PYTHON%-x64\\python.exe manage.py test"
+  - "python manage.py test"
