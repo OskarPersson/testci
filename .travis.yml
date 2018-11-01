@@ -23,11 +23,13 @@ matrix:
         - choco install python3 --version 3.6.6
         - export PATH="/c/Python36:/c/Python36/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel
+        
+        - choco install redis-64
+        - redis-64\tools\redis-server.exe --service-install
+        - redis-64\tools\redis-server.exe --service-start
 
 install:
-  - choco install redis-64
-  - redis-64\tools\redis-server.exe --service-install
-  - redis-64\tools\redis-server.exe --service-start
+
   - pip install django==$DJANGO_VERSION
   
 script:
