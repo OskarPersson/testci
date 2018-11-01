@@ -6,18 +6,19 @@ services:
   - redis-server
 
 matrix:
-  - python: "2.7"
-    dist: trusty
+  include:
+    - python: "2.7"
+      dist: trusty
 
-  - python: "3.6"
-    dist: trusty
-    
-  - os: windows
-    language: sh
-    python: "3.6"
-    before_install:
-      - choco install python3 --version 3.6.6
-      - python -m pip install --upgrade pip wheel
+    - python: "3.6"
+      dist: trusty
+
+    - os: windows
+      language: sh
+      python: "3.6"
+      before_install:
+        - choco install python3 --version 3.6.6
+        - python -m pip install --upgrade pip wheel
 
 install:
   - pip install django==$DJANGO_VERSION
