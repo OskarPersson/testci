@@ -25,8 +25,8 @@ matrix:
         - python -m pip install --upgrade pip wheel
         
         - choco install redis-64
-        - redis-64/tools/redis-server.exe --service-install
-        - redis-64/tools/redis-server.exe --service-start
+        - /c/ProgramData/chocolatey/lib/redis-64/tools/redis-server.exe --service-install
+        - /c/ProgramData/chocolatey/lib/redis-64/tools/redis-server.exe --service-start
 
 install:
 
