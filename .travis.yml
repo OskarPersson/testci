@@ -9,13 +9,16 @@ matrix:
   include:
     - python: "2.7"
       dist: trusty
+      env: DJANGO_VERSION=1.11
 
-    - python: "3.6"
+    - python: "2.7"
       dist: trusty
+      env: DJANGO_VERSION=1.11
 
     - os: windows
       language: sh
       python: "3.6"
+      env: DJANGO_VERSION=1.11
       before_install:
         - choco install python3 --version 3.6.6
         - python -m pip install --upgrade pip wheel
