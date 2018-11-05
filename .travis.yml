@@ -1,21 +1,11 @@
 sudo: false
 language: python
 cache: pip
+python: 3.6
 
 
-
-matrix:
-  include:
-    - os: windows
-      language: sh
-      python: "3.6"
-      env: DJANGO_VERSION=1.11
-      before_install:
-        - choco install python3 --version 3.6.6
-        - export PATH="/c/Python36:/c/Python36/Scripts:$PATH"
-        - python -m pip install --upgrade pip wheel
-        
-        - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password123?' -p 1433:1433 -d microsoft/mssql-server-windows-developer
+before_install:
+  - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password123?' -p 1433:1433 -d microsoft/mssql-server-linux:latest
 
 install:
   - pip install django-pyodbc-azure==1.11.15.0
