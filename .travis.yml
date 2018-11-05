@@ -2,19 +2,10 @@ sudo: false
 language: python
 cache: pip
 
-services:
-  - redis-server
+
 
 matrix:
   include:
-    - python: "2.7"
-      dist: trusty
-      env: DJANGO_VERSION=1.11
-
-    - python: "3.6"
-      dist: trusty
-      env: DJANGO_VERSION=1.11
-
     - os: windows
       language: sh
       python: "3.6"
@@ -24,12 +15,11 @@ matrix:
         - export PATH="/c/Python36:/c/Python36/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel
         
-        - choco install redis-64
+        - choco install sql-server-2016-developer-edition
 
 install:
 
   - pip install django==$DJANGO_VERSION
   
 script:
-  - redis-cli PING
-  - ./manage.py test
+  - ./manage.py test -v2
