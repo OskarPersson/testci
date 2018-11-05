@@ -15,7 +15,7 @@ matrix:
         - export PATH="/c/Python36:/c/Python36/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel
         
-        - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password123?' -p 1433:1433 -d msint.azurecr.io/mssql/server:2017-CU8
+        - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password123?' -p 1433:1433 -d mcr.microsoft.com/mssql/server:latest
 
 install:
   - pip install django-pyodbc-azure==1.11.15.0
