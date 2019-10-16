@@ -23,7 +23,7 @@ matrix:
         - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
       after_success:
         - choco install codecov
-        - codecov -c
+        - codecov
 
 install:
   - python -m pip install --upgrade pip wheel codecov setuptools
