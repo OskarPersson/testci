@@ -1,6 +1,6 @@
 sudo: required
 language: python
-python: '3.7'
+python: "3.7"
 dist: xenial
 
 cache:
@@ -8,25 +8,19 @@ cache:
 
 matrix:
   include:
-    - name: 'Linux with SQLite'
-      python: '3.7'
+    - name: "Linux with SQLite"
+      python: "3.7"
 
-    - name: 'Windows with MSSQL'
+    - name: "Windows with MSSQL"
       stage: test
       os: windows
       language: sh
-      python: '3.7'
+      python: "3.7"
       cache:
         directories:
-          - '${HOME}/AppData/Local/pip/Cache/wheels'
+          - "${HOME}/AppData/Local/pip/Cache/wheels"
       before_install:
         - choco install python --version 3.7.4
-
-
-  # Pin six to avoid dependency errors,
-  # see https://github.com/pypa/pip/issues/4887
-  - pip install --upgrade six>=1.12.0
-  - pip install -r requirements/tests.txt
 
 install:
   - python -m pip install --upgrade pip wheel codecov setuptools
