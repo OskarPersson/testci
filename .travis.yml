@@ -1,14 +1,39 @@
-sudo: false
+sudo: required
 language: python
-cache: pip
-python: 3.6
+python: '3.7'
+dist: xenial
+
+cache:
+  pip: true
+
+matrix:
+  include:
+    - name: 'Linux with SQLite'
+      python: '3.7'
+
+    - name: 'Windows with MSSQL'
+      stage: test
+      os: windows
+      language: sh
+      python: '3.7'
+      cache:
+        directories:
+          - '${HOME}/AppData/Local/pip/Cache/wheels'
+      before_install:
+        - choco install python --version 3.7.4
 
 
-before_install:
-  - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password123?' -p 1433:1433 -d microsoft/mssql-server-linux:latest
+  # Pin six to avoid dependency errors,
+  # see https://github.com/pypa/pip/issues/4887
+  - pip install --upgrade six>=1.12.0
+  - pip install -r requirements/tests.txt
 
 install:
-  - pip install django==1.11.16 django-pyodbc-azure==1.11.15.0
-  
+  - python -m pip install --upgrade pip wheel codecov setuptools
+  - pip install -r requirements.txt
+
 script:
-  - ./manage.py test -v2
+  - coverage run manage.py test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -c -F backend
