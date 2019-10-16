@@ -75,13 +75,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'core',
-        'USER': 'sa',
-        'PASSWORD': 'Password123?',
-        'OPTIONS': {
-            'isolation_level': 'read committed',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
