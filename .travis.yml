@@ -21,6 +21,9 @@ matrix:
       before_install:
         - choco install python --version 3.7.4
         - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
+      after_success:
+        - choco install codecov
+        - codecov -c
 
 install:
   - python -m pip install --upgrade pip wheel codecov setuptools
