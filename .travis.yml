@@ -11,8 +11,7 @@ matrix:
     - name: "Linux with SQLite"
       python: "3.7"
 
-    - name: "Windows with MSSQL"
-      stage: test
+    - name: "Windows with SQLite"
       os: windows
       language: sh
       python: "3.7"
@@ -21,6 +20,7 @@ matrix:
           - "${HOME}/AppData/Local/pip/Cache/wheels"
       before_install:
         - choco install python --version 3.7.4
+        - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
 
 install:
   - python -m pip install --upgrade pip wheel codecov setuptools
