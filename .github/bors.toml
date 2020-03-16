@@ -10,3 +10,4 @@ status = [
     "test (windows-latest, 3.8)",
 ]
 delete_merged_branches = true
+use_squash_merge = true
