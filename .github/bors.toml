@@ -1,0 +1,12 @@
+status = [
+    "test (macos-latest, 3.6)",
+    "test (macos-latest, 3.7)",
+    "test (macos-latest, 3.8)",
+    "test (ubuntu-latest, 3.6)",
+    "test (ubuntu-latest, 3.7)",
+    "test (ubuntu-latest, 3.8)",
+    "test (windows-latest, 3.6)",
+    "test (windows-latest, 3.7)",
+    "test (windows-latest, 3.8)",
+]
+delete_merged_branches = true
