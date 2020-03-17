@@ -9,7 +9,6 @@ on:
     branches:
       - staging
       - trying
-      - master
 
 jobs:
   test:
